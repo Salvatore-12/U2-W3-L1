@@ -16,7 +16,7 @@ class User {
 
 }
 
-const utent1 = new User("Maria","Benedetti",30,"Napoli");
+const utent1 = new User("Maria","Benedetti",40,"Napoli");
 const utent2 = new User("Francesco","Belli",40,"Roma");
-const resultComparision=utent1.ageComparison(utent2)
+const resultComparision=utent2.ageComparison(utent1)
 console.log(resultComparision)

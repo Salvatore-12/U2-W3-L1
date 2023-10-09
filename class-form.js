@@ -1,8 +1,8 @@
 
-const petName = document.getElementById("petName").value;
-const ownerName = document.getElementById("ownerName").value;
-const species = document.getElementById("species").value;
-const breed = document.getElementById("breed").value;
+const petName = document.getElementById("petName");
+const ownerName = document.getElementById("ownerName");
+const species = document.getElementById("species");
+const breed = document.getElementById("breed");
 
 const pets = []
 
@@ -24,13 +24,13 @@ const renderList = function () {
 
     petList.innerHTML = ''
 
-    petList.forEach((pet) => {
+    pets.forEach((pet) => {
 
         const newLi = document.createElement('li')
 
         newLi.innerText = `${pet.petName} ${pet.ownerName} - ${pet.species} ${pet.breed}`;
 
-        contactsList.appendChild(newLi)
+        petList.appendChild(newLi)
     })
 }
 
@@ -46,7 +46,7 @@ formReference.addEventListener('submit', function (e) {
 
     console.log('ANIMALE CREATO', newPet)
 
-    contacts.push(new Pet)
+    pets.push(newPet)
 
     petName.value = ''
     ownerName.value = ''
